@@ -1,0 +1,12 @@
+.error ul{
+    padding: 0;
+}
+
+.error ul li{
+    list-style: none;
+    color: red;
+}
+
+.id label{
+    display: none;
+}

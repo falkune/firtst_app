@@ -1,0 +1,24 @@
+###
+get http://127.0.0.1:8000/api/articles
+
+###
+post http://127.0.0.1:8000/api/post_article
+Content-Type: application/json
+
+{
+    "titre": "test api",
+    "description": "desc"
+}
+
+
+###
+put http://127.0.0.1:8000/api/update/2
+Content-Type: application/json
+
+{
+    "titre": "test api update",
+    "description": "descfff"
+}
+
+###
+delete http://127.0.0.1:8000/api/delete/1

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EventController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Hello</h1>
+    {% if events  is defined %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Lieu</th>
+                    <th scope="col">Max Participants</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                    <tr>
+                        <td>{{ event.titre }}</td>
+                        <td>{{ event.date | date('d/m/Y') }}</td>
+                        <td>{{ event.lieu }}</td>
+                        <td>{{ event.maxParticipants }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Vide</p>
+    {% endif %}
+    
+</div>
+{% endblock %}

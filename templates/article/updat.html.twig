@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Article Create {% endblock %}
+
+{% block body %}
+    <div class="container">
+        {{ form_start(form) }}
+            <div class="id">
+                {{ form_label(form.id) }}
+            </div>
+            {{ form_widget(form.id, {'attr': {'value': article.id}}) }}
+
+            {{ form_row(form.titre, {'attr': {'value': article.titre}}) }}
+
+            {{ form_row(form.description, {'attr': {'value': article.description}}) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
